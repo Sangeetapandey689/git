@@ -1,3 +1,36 @@
+<script src ="https://cdnjs.cloudflare.com/ajax/libs/axios/1.4.0/axios.min.js"></script>
+ axios.post("https://crudcrud.com/api/55a34bc9abfe4526b26cca6887ddf10a/expenseTracker",obj)
+ .then((respone)=>{
+     showUserOnScreen(response.data)
+     console.log(response)
+ })
+ .catch((err) =>{
+     console.log(err)
+ })
+
+
+window.addEventListener("DOMContentLoaded",() =>{
+const data =  axios.get("https://crudcrud.com/api/55a34bc9abfe4526b26cca6887ddf10a/expenseTracker")
+ .then ((response) => {
+     console.log(response)
+     for(var i=0; i<response.data.length; i++){
+         showUserOnScreen(response.data[i])
+     }
+ })
+ .catch((errror) =>{
+     console.log(error)
+ })
+ console.log(data)
+
+})
+axios.delete(`https://crudcrud.com/api/55a34bc9abfe4526b26cca6887ddf10a/expenseTracker${user._id}`)
+.then(() => {
+    parentElem.removeChild(childElem);
+})
+.catch((error) => {
+    console.log(error);
+});
+
 function displayLocalStorageData() {
     const itemList = document.getElementById('items');
     itemList.innerHTML = ''; // Clear the existing list items
