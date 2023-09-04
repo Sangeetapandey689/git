@@ -1,0 +1,38 @@
+/* Basic CSS for styling the chat */
+body {
+    font-family: Arial, sans-serif;
+}
+
+.chat-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.chat-window {
+    width: 400px;
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+
+.messages {
+    height: 300px;
+    overflow-y: scroll;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin-bottom: 10px;
+}
+
+.message-form {
+    display: flex;
+}
+
+#message-input {
+    flex-grow: 2;
+    padding: 5px;
+}
+
+#send-button {
+    padding: 5px 10px;
+}
